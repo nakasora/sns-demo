@@ -4,17 +4,6 @@ import { AuthReducer } from "./AuthReducer";
 // 最初のユーザ状態を定義
 const initialStaste = {
   user: JSON.parse(localStorage.getItem("user")) || null,
-  // user: {
-  //   _id: "64f1dab53e9332c6692fc286",
-  //   username: "nakasora",
-  //   email: "nakasora@gmail.com",
-  //   password: "nakasora",
-  //   profilePicture: "/person/1.jpeg",
-  //   converPicture: "",
-  //   followers: [],
-  //   followings: [],
-  //   isAdmin: false,
-  // },
   isFetching: false,
   error: false,
 };
