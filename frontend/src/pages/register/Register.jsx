@@ -71,7 +71,12 @@ const Register = () => {
             <button className="loginButton" type="submit">
               サインアップ
             </button>
-            <button className="loginRegisterButton">ログイン</button>
+            <button
+              className="loginRegisterButton"
+              onClick={() => navigate("/login")}
+            >
+              ログイン画面へ
+            </button>
           </form>
         </div>
       </div>

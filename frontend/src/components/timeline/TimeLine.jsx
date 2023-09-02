@@ -13,7 +13,11 @@ const TimeLine = ({ username }) => {
       const response = username
         ? await axios.get(`/api/posts/profile/${username}`)
         : await axios.get(`/api/posts/timeline/${user._id}`);
-      setPosts(response.data);
+      setPosts(
+        response.data.sort((post1, post2) => {
+          return new Date(post2.createdAt) - new Date(post1.createdAt);
+        })
+      );
     };
     fetchPost();
   }, [username, user._id]);
