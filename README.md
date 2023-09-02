@@ -1,10 +1,9 @@
 # sns-demo
 
-## MERNスタックアーキテクチャ
-
 ### 技術スタック
+
+- MERN(フルスタック)
 - React
 - Node.js
 - MongoDB
-
-###### frontendはViteにより作成
+- frontend は Vite により作成
