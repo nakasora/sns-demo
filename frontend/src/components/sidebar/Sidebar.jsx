@@ -12,8 +12,10 @@ import "./Sidebar.css";
 import CloseFriend from "../closefriend/CloseFriend";
 import { Users } from "../../DummyData";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../../state/AuthContext";
 
 const Sidebar = () => {
+  const { user } = useAuth();
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -43,7 +45,7 @@ const Sidebar = () => {
           <li className="sidebarListItem">
             <Person className="sidebarIcon" />
             <Link
-              to="/profile/nakasora"
+              to={`/profile/${user.username}`}
               style={{ textDecoration: "none", color: "black" }}
             >
               <span className="sidebarListItemText">プロフィール</span>
@@ -56,8 +58,8 @@ const Sidebar = () => {
         </ul>
         <hr className="sidebarHr" />
         <ul className="sideabrFriendList">
-          {Users.map((user) => (
-            <CloseFriend user={user} key={user.id} />
+          {Users.map((_user) => (
+            <CloseFriend user={_user} key={_user.id} />
           ))}
         </ul>
       </div>
