@@ -3,6 +3,7 @@ import React from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../../state/AuthContext";
+import Logout from "../../pages/logout/Logout";
 
 const Topbar = () => {
   const { user } = useAuth();
@@ -46,6 +47,7 @@ const Topbar = () => {
             ></img>
           </Link>
         </div>
+        <Logout />
       </div>
     </div>
   );
