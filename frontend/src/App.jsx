@@ -13,7 +13,6 @@ import { useAuth } from "../state/AuthContext";
 
 function App() {
   const { user } = useAuth();
-  console.log(user);
   return (
     <Router>
       <Routes>
