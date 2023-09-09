@@ -1,0 +1,20 @@
+# docker-compose.yml
+
+version: "3"
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://nakasora:100831aBxY@cluster0.ai8pyw9.mongodb.net/realsns?retryWrites=true&w=majority
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+
+  mongo:
+    image: "mongo"
+    ports:
+      - "27017:27017"
