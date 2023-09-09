@@ -3,9 +3,10 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
+const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || "http://localhost:5173";
 app.use(
   cors({
-    origin: "http://localhost:5173", //アクセス許可するオリジン
+    origin: ALLOWED_ORIGIN, //アクセス許可するオリジン
     credentials: true, //レスポンスヘッダーにAccess-Control-Allow-Credentials追加
     optionsSuccessStatus: 200, //レスポンスstatusを200に設定
   })

@@ -14,7 +14,6 @@ const Rightbar = ({ user }) => {
             <b>フォロワー限定</b>イベント開催中
           </span>
         </div>
-        <img src="/ad.jpeg" alt="" className="eventImg" />
         <h4 className="rightbarTitle">オンラインの友達</h4>
         <ul className="rightbarFriendList">
           {Users.map((user) => (
